@@ -9,4 +9,3 @@ FROM pg_stat_activity WHERE state = 'active';
 
 -- Cache hit ratio
 SELECT sum(blks_hit) / nullif(sum(blks_hit + blks_read), 0) AS ratio FROM pg_stat_database;
-
